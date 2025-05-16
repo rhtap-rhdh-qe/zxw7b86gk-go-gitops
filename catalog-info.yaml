@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: zxw7b86gk-go-gitops
+  description: This is GitOps manifest for zxw7b86gk-go   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-selector: tssc/gitops=zxw7b86gk-go
+    backstage.io/kubernetes-id: zxw7b86gk-go 
+    backstage.io/techdocs-ref: dir:. 
+    janus-idp.io/tekton: zxw7b86gk-go
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:zxw7b86gk-go
